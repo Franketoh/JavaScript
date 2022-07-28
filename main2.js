@@ -169,11 +169,16 @@ function filtro() {
         mostrarProductos(arrayNuevo)
     }
 }
+let parrafo = document.querySelector("#parrafo");
+let boton = document.querySelector("#boton");
 
+const escribir = ()=> {
+    let texto = prompt("Que texto queres agregar?");
+    parrafo.innerHTML = texto;
+
+    boton.addEventListener("click",escribir)
+}
 //Buscador
-
-
-mostrarProductos(stockProductos)
 
 //logica Ecommerce
 function mostrarProductos(array){
